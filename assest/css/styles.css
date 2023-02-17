@@ -1,0 +1,80 @@
+:root {
+    --red: #ef476f;
+    --green: #06d6a0;
+    --yellow: #ffd166;
+    --blue: #518cd8;
+}
+
+body {
+    background: #ffeaba;
+}
+
+.quizBox-parent-container {
+    background-color: darkgrey;
+    position: absolute;
+    /* top: 35%;
+    left: 40%;
+    margin-top: -200px;
+    margin-left: -250px; */
+    width: 800px;
+    height: 600px;
+    justify-self: center;
+    display: grid;
+}
+
+.quizBox-parent-container h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.quizBox-parent-container p {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.grid-container {
+    display: flex;
+    background-color: lightgray;
+    flex-direction: column;
+    /* position: absolute; */
+    justify-self: center;
+    /* top: 35%;
+    left: 40%;
+    margin-top: 50px;
+    margin-left: -250px; */
+    width: 600px;
+}
+
+.wrapper, .second-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.grid-item {
+    padding: 2rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+}
+
+.red {
+    background-color: var(--red);
+    grid-area: red-box;
+}
+
+.green {
+    background-color: var(--green);
+    grid-area: green-box;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    grid-area: yellow-box;
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+
