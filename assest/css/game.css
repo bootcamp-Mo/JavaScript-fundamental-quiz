@@ -12,3 +12,48 @@
     font-size: 62.5%;
     /* add font family */
 }
+body{
+    color: var(--green);
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #daac41;
+    transition: transform 100ms;
+    transform: scale(1.03);
+}
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: var(--blue);
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: var(--blue);
+}
+
+.correct {
+    background: var(--red);
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+    
+}
