@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" 
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assest/css/styles.css">
     <link rel="stylesheet" href="./assest/css/game.css">
     <link rel="stylesheet" href="./assest/css/end.css">
     <title>Mo' Quiz</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div id="end" class="flex-column flex-center">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">To add your score to the scoreboard with a moniker </h2>
+                <input type="text" name="name" id="username" placeholder="Moniker">
+                <button 
+                class="btn"
+                id="saveScoreButton" 
+                type="submit" 
+                onclick="saveHighScore{event}" 
+                disabled>
+                Add
+                </button>
+            </form>
+            <a href="/game.html" class="btn">Play</a>
+            <a href="/" class="btn">Go back</a>
+        </div>
+    </div>
+    <script src="./assest/js/game.js"></script>
 </body>
+
 </html>

@@ -4,7 +4,8 @@
     --green: #a4b750;
     --yellow: #ffd166;
     --blue: #518cd8;
-    background-color: #fff0c3;
+    --background-color: #fff0c3;
+    
 }
 
 * {
@@ -13,6 +14,10 @@
     padding: 0;
     font-size: 62.5%;
     font-family: 'Averia Serif Libre', cursive;
+}
+
+body{
+    background-color: var(--background-color);
 }
 
 h1 {
@@ -82,8 +87,11 @@ h2 {
     transform: none;
 }
 
-#game, #home {
-    background-color: darkslategray;
+#game, 
+#home, 
+#end, 
+#hightScore {
+    background-color: #2f4f4f;
     border-radius: 5rem;
     padding: 50px;
 }
@@ -94,4 +102,49 @@ h2 {
 
 #highscore-btn:hover {
     box-shadow: 0 0.4rem 1.4rem 0 #000000;
+}
+
+
+/*  End of game CSS */
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    text-align: center;
+}
+
+input::placeholder {
+    color: var(--blue);
+    text-align: center;
+}
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+#end-text {
+    font-size: 2.4rem;
+    color: var(--red);
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: var(--red);
 }

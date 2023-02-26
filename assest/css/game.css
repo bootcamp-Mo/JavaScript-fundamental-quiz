@@ -26,11 +26,10 @@ body {
     background-color: var(--yellow);
     font-size: 3rem;
     min-width: 80rem;
-    text-shadow: 1px 1px 3px var(--green);
+    text-shadow: 1px 1px 2px #292525;
 }
 
 .choice-container:hover {
-    cursor: pointer;
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 #daac41;
     transition: transform 100ms;
@@ -50,15 +49,15 @@ body {
     font-size: 3rem;
 }
 
+
 .correct {
     background: var(--green);
-    color:  #ffd166;
+    color: var(--yellow);
 }
 
 .incorrect {
     background: var(--red);
     color: var(--yellow);
-    text-shadow: 1px 1px 4px var(--red);
 }
 
 #hud {
