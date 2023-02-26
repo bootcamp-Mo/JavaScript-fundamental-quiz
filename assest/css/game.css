@@ -1,18 +1,20 @@
 :root {
-    --red: #ef476f;
+    --red: #ef6947;
     --green: #a4b750;
     --yellow: #ffd166;
-    --blue: #518cd8;
+    --blue: #518bd8c5;
     background-color: #fff0c3;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    /* add font family */
+    font-family: 'Averia Serif Libre', cursive;
 }
-body{
+
+body {
     color: var(--green);
 }
 
@@ -24,6 +26,7 @@ body{
     background-color: var(--yellow);
     font-size: 3rem;
     min-width: 80rem;
+    text-shadow: 1px 1px 3px var(--green);
 }
 
 .choice-container:hover {
@@ -33,31 +36,39 @@ body{
     transition: transform 100ms;
     transform: scale(1.03);
 }
+
 .choice-prefix {
     padding: 2rem 2.5rem;
-    color: var(--blue);
+    color: var(--red);
+    font-size: 2.5rem;
+    font-family: 'Knewave', cursive;
 }
 
 .choice-text {
     padding: 2rem;
     width: 100%;
+    font-size: 3rem;
 }
 
 .correct {
     background: var(--green);
+    color:  #ffd166;
 }
 
 .incorrect {
     background: var(--red);
+    color: var(--yellow);
+    text-shadow: 1px 1px 4px var(--red);
 }
 
 #hud {
     display: flex;
     justify-content: space-between;
 }
+
 .hud-prefix {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .hud-main-text {
@@ -85,5 +96,5 @@ body{
     .choice-container {
         min-width: 40rem;
     }
-    
+
 }

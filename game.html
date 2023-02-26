@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assest/css/styles.css">
     <link rel="stylesheet" href="assest/css/game.css">
-    <title>Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap" 
+    rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    <title>Mo' Quiz</title>
 
 </head>
 <body>
+    <!-- class Container holds 1 thing: Game  -->
     <div class="container">
+        <!-- id Gamer holds 6 things: 1 id hud, 1 h1, 4 class choice-containers  -->
         <div id="game" class="justify-center flex-column">
+            <!-- id Hud holds 2 things: 2 hud-items  -->
             <div id="hud">
                 <div class="hud-item">
                     <p id="progressText" class="hud-prefix">
@@ -31,20 +42,23 @@
                 </div>
             </div>
             <h1 id="question"> this will be the question</h1>
+            <!-- class Choice Container holds 2 things -->
+                <!-- this bit is repetitive and  and boring to continue commit,
+                    past this is a waste of time that can be used else where :/ -->
             <div class="choice-container">
-                <p class="choice-prefix">A</p>
+                <p class="choice-prefix">a.</p>
                 <p class="choice-text" data-number="1"> choice</p>
             </div>
             <div class="choice-container">
-                <p class="choice-prefix">B</p>
+                <p class="choice-prefix">b.</p>
                 <p class="choice-text" data-number="2"> choice</p>
             </div>
             <div class="choice-container">
-                <p class="choice-prefix">C</p>
+                <p class="choice-prefix">c.</p>
                 <p class="choice-text" data-number="3"> choice</p>
             </div>
             <div class="choice-container">
-                <p class="choice-prefix">D</p>
+                <p class="choice-prefix">d.</p>
                 <p class="choice-text" data-number="4"> choice</p>
             </div>
 

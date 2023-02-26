@@ -10,6 +10,8 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+// objects: question, choices,  
+
 let questions = [
     {
         question: 'what is 2+2',
@@ -17,7 +19,7 @@ let questions = [
         choice2: '4',
         choice3: '6',
         choice4: '8',
-        answer: '4',
+        answer: 2,
     },
     {
         question: 'what is 2+3',
@@ -25,7 +27,7 @@ let questions = [
         choice2: '5',
         choice3: '7',
         choice4: '9',
-        answer: '5',
+        answer: 2,
     },
     {
         question: 'what is a',
@@ -33,7 +35,7 @@ let questions = [
         choice2: 'g',
         choice3: 'h',
         choice4: 'v',
-        answer: 'h',
+        answer: 3,
     },
     {
         question: '2',
@@ -41,9 +43,10 @@ let questions = [
         choice2: 'h',
         choice3: 'w',
         choice4: '8fas',
-        answer: 'w',
+        answer: 2,
     }
 ]
+
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
@@ -60,6 +63,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuestions === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
+        console.log('waaaa')
         return window.location.assign('./end.html')
     }
     questionCounter++
@@ -88,7 +92,7 @@ getNewQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
-
+console.log("thing")
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
@@ -97,6 +101,7 @@ choices.forEach(choice => {
             'incorrect'
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
+            console.log('correct?')
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
