@@ -10,7 +10,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-// array of objects
+// array of objects 
 
 let questions = [
     {
@@ -61,8 +61,9 @@ startGame = () => {
 //this function is used to retrieve a new question and update the progress bar and progress
 // text based on the current state of the quiz and updates the available questions
 getNewQuestion = () => {
-    if (availableQuestions === 0 || questionCounter > MAX_QUESTIONS) {
-        return window.location.assign('./end.html')
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('end.html')
     }
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
@@ -70,7 +71,6 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
     question.innerText = currentQuestion.question
-
 // this arrow function is used to update the content of the choices elements with the
 // possible answers to the current question
     choices.forEach(choice => {
@@ -99,8 +99,8 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        
         selectedChoice.parentElement.classList.add(classToApply)
-
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
@@ -109,8 +109,8 @@ choices.forEach(choice => {
 })
 
 incrementScore = num => {
-    score += num
+    score += num 
     scoreText.innerText = score
+    localStorage.setItem('score', score)
 }
-
 startGame()
