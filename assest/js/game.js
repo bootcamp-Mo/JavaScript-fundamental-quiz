@@ -1,8 +1,8 @@
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-const progressText = document.querySelector('#progressText');
-const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull');
+const question = document.querySelector('#question')
+const choices = Array.from(document.querySelectorAll('.choice-text'))
+const progressText = document.querySelector('#progressText')
+const scoreText = document.querySelector('#score')
+const progressBarFull = document.querySelector('#progressBarFull')
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -10,40 +10,43 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+// array of objects 
+
 let questions = [
     {
-        question: 'what is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '6',
-        choice4: '8',
-        answer: '4',
+        question: 'whfdtye trt hdtrhetryh eytujuy at is 2+2',
+        choice1: ' dfghdfgh truy tyuj ty2',
+        choice2: '4tyd rthftgh',
+        choice3: 't yrtu rtyutu y6',
+        choice4: '8rt ydtghjdgjhtyyu dgh',
+        answer: 2,
     },
     {
         question: 'what is 2+3',
-        choice1: '3',
-        choice2: '5',
-        choice3: '7',
-        choice4: '9',
-        answer: '5',
+        choice1: 'yuj fdggh 3',
+        choice2: 'yud gn gethty 5',
+        choice3: '7ty rth trguyt u',
+        choice4: 'ertyfdg drtyrdth9',
+        answer: 2,
     },
     {
-        question: 'what is a',
-        choice1: 'f',
-        choice2: 'g',
-        choice3: 'h',
-        choice4: 'v',
-        answer: 'h',
+        question: 'whatrty ertu e5tyu tyj h is a',
+        choice1: 'ftre yrt ye56ue ty jerty ertyw t',
+        choice2: 'adsgadsgadfgd rtserg sdfgsdf g',
+        choice3: 'h tfdsgsdrt srtgsrty rth ',
+        choice4: 'vsdfg re ggret',
+        answer: 3,
     },
     {
-        question: '2',
-        choice1: 't',
-        choice2: 'h',
-        choice3: 'w',
-        choice4: '8fas',
-        answer: 'w',
+        question: '2wrty ertuy etruy ejetyu e uwe5ty wth ty ukryuj 677',
+        choice1: 'tt yse rth trs',
+        choice2: 'ht ert5t w t',
+        choice3: 'u ert rte tww',
+        choice4: '8fteryer67e e tyu eueas',
+        answer: 2,
     }
 ]
+
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
@@ -58,9 +61,9 @@ startGame = () => {
 //this function is used to retrieve a new question and update the progress bar and progress
 // text based on the current state of the quiz and updates the available questions
 getNewQuestion = () => {
-    if (availableQuestions === 0 || questionCounter > MAX_QUESTIONS) {
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('./end.html')
+        return window.location.assign('end.html')
     }
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
@@ -68,7 +71,6 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
     question.innerText = currentQuestion.question
-
 // this arrow function is used to update the content of the choices elements with the
 // possible answers to the current question
     choices.forEach(choice => {
@@ -87,8 +89,7 @@ getNewQuestion = () => {
 // It also updates the user's score and retrieves a new question after a brief delay
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return
-
+        if (!acceptingAnswers) return 
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
@@ -98,8 +99,8 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        
         selectedChoice.parentElement.classList.add(classToApply)
-
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
@@ -108,8 +109,8 @@ choices.forEach(choice => {
 })
 
 incrementScore = num => {
-    score += num
+    score += num 
     scoreText.innerText = score
+    localStorage.setItem('score', score)
 }
-
 startGame()
