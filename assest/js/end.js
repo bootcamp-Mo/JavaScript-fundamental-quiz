@@ -9,9 +9,8 @@ const MAX_HIGH_SCORE = 5
 
 // This  handles saving and displaying high scores
 
-console.log(mostRecentScore)
 
-finalScore.innerText = mostRecentScore
+finalScore.innerText = thisScore
 
 username.addEventListener('keyup',  () => {
     saveScoreBtn.disabled = !username.value
@@ -20,22 +19,20 @@ username.addEventListener('keyup',  () => {
 saveHighScore = e => {
     e.preventDefault()
 
-console.log('check')
+
     const score = {
         score: thisScore,
         name: username.value
     }
-    console.log('score')
-    
-    console.log(thisScore)
+
     highScores.push(score)
 
     highScores.sort((a,b) => {
         return b.score - a.score
     })
-    console.log('sort')
+
     highScores.splice(5)
-    console.log('splice')
+
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('./scores.html')
 }
