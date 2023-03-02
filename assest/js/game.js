@@ -61,14 +61,14 @@ startGame = () => {
     availableQuestions = [...questions]
     getNewQuestion()
     startTimer()
+    localStorage.setItem('score', 0)
 }
 
 //this function is used to retrieve a new question and update the progress bar and progress
 // text based on the current state of the quiz and updates the available questions
 getNewQuestion = () => {
 
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         return window.location.assign('end.html')
     }
     questionCounter++
@@ -91,8 +91,7 @@ getNewQuestion = () => {
 startTimer = () => {
     // Sets timer
     timer = setInterval(function() {
-      timerCount--
-      timerElement.textContent = timerCount
+      decreaseTimer()
 
       if (timerCount === 0) {
         // Clears interval
@@ -103,6 +102,10 @@ startTimer = () => {
 
   }
 
+function decreaseTimer() {
+    timerCount--
+    timerElement.textContent = timerCount
+}
 
 // this code block is used to allow the user to select an answer to the
 // question and receive feedback on whether their answer was correct or incorrect.
@@ -117,13 +120,13 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
             'incorrect'
         if (classToApply === 'correct') {
-            timerCount++
+            incrementScore(SCORE_POINTS)
         }
         if (classToApply === 'incorrect') {
-            timerCount--
+            decreaseTimer()
         }
 
-        
+
         selectedChoice.parentElement.classList.add(classToApply)
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
