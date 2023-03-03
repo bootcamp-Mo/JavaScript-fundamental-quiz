@@ -15,37 +15,37 @@ let timerCount
 
 let questions = [
     {
-        question: 'whfdtye trt hdtrhetryh eytujuy at is 2+2',
-        choice1: ' dfghdfgh truy tyuj ty2',
-        choice2: '4tyd rthftgh',
-        choice3: 't yrtu rtyutu y6',
-        choice4: '8rt ydtghjdgjhtyyu dgh',
-        answer: 2,
+        question: 'Inside which HTML element do we put the JavaScript?',
+        choice1: '<javascript>',
+        choice2: '<script>',
+        choice3: '<js>',
+        choice4: '<scripting>',
+        answer: 2
     },
     {
-        question: 'what is 2+3',
-        choice1: 'yuj fdggh 3',
-        choice2: 'yud gn gethty 5',
-        choice3: '7ty rth trguyt u',
-        choice4: 'ertyfdg drtyrdth9',
-        answer: 2,
+        question: 'Which event occurs when the user clicks on an HTML element?',
+        choice1: 'onclick',
+        choice2: 'onmouseclick',
+        choice3: 'onmouseover',
+        choice4: 'onchange',
+        answer: 1,
     },
     {
-        question: 'whatrty ertu e5tyu tyj h is a',
-        choice1: 'ftre yrt ye56ue ty jerty ertyw t',
-        choice2: 'adsgadsgadfgd rtserg sdfgsdf g',
-        choice3: 'h tfdsgsdrt srtgsrty rth ',
-        choice4: 'vsdfg re ggret',
-        answer: 2,
+        question: 'How does a FOR loop start?',
+        choice1: 'for i = 1 to 5 ',
+        choice2: 'for (i <= 5; i++)',
+        choice3: 'for (i = 0; i <= 5; i++)  ',
+        choice4: 'for (i = 0; i <= 5)  ',
+        answer: 3,
     },
     {
-        question: '2wrty ertuy etruy ejetyu e uwe5ty wth ty ukryuj 677',
-        choice1: 'tt yse rth trs',
-        choice2: 'ht ert5t w t',
-        choice3: 'u ert rte tww',
-        choice4: '8fteryer67e e tyu eueas',
-        answer: 2,
-    }
+        question: 'How to write an IF statement in JavaScript? ',
+        choice1: 'if i = 5 then',
+        choice2: 'if i == 5 then',
+        choice3: 'if i = 5',
+        choice4: 'if (i == 5)',
+        answer: 4,
+    },
 ]
 
 
@@ -57,7 +57,7 @@ const MAX_QUESTIONS = 4
 startGame = () => {
     questionCounter = 0
     score = 0
-    timerCount = 10
+    timerCount = 15
     availableQuestions = [...questions]
     getNewQuestion()
     startTimer()

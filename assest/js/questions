@@ -1,0 +1,107 @@
+
+Run the following code and explain the output:
+
+var sample = function(){
+    var a = b = 3;
+}
+sample();
+console.log("Is a defined?", typeof a !== "undefined");
+console.log("Is b defined?", typeof b !== "undefined");
+
+
+Write a function that takes in an input and returns true if it's an integer and false otherwise.
+
+Ex:
+Input: "7"
+Output: false
+
+Input: 7
+Output: true
+
+Input: 4.3
+Output: false
+
+Write a function that takes in an array of numbers and outputs the average of all the numbers.
+
+Ex:
+Input: [ 1 , 4 , 7 ]
+Output: 4
+
+Input: [ 10, 5 ]
+Output: 7.5
+
+Input: [ 1.5, 3, 2.5, 1 ]
+Output: 2
+
+
+Write a function that takes in a string and outputs the first occurrence of a character that does not repeat itself in that string.
+
+Ex:
+Input: "the quick brown fox jumps over the calm kitten quietly"
+Output: "b"
+
+Input: "this hat is the greatest!"
+Output: "g"
+
+Input: "what a wonderful day it has been!"
+Output: "o"
+
+Write a function that takes in a single word as a string and returns true if it's a palindrome and false otherwise (a palindrome is spelled the same way forwards and backwards).
+
+Ex:
+Input: "noon"
+Output: true
+
+Input: "horse"
+Output: false
+
+Input: "racecar"
+Output: true
+
+Write a function that takes in a string and outputs the number of vowels (not counting y).
+
+Ex:
+Input: "hello"
+Output: 2
+
+Input: "you are great!"
+Output: 6
+
+Input: "why?"
+Output: 0
+
+Write a function that takes in an array of numbers and outputs the maximum number.
+
+Ex:
+Input: [ 1, 2, 3 ]
+Output: 3
+
+Input: [ 3, 6, 4, 5, 2, 1 ]
+Output: 6
+
+Input: [ 3, 3, 3 ]
+Output: 3
+
+Write a function that takes in an integer and outputs the sum of all the numbers from 1 to that integer.
+
+Ex:
+Input: 2
+Output: 3 (because 1 + 2 = 3)
+
+Input: 4
+Output: 10  (because 1 + 2 + 3 + 4 = 10)
+
+Input: 10
+Output: 55
+
+Write a function that takes in two numbers and outputs the max (the greater of the two numbers).
+
+Ex: 
+Input: 1, 2
+Output: 2
+
+Input: 6, -4
+Output: 6
+
+Input: 3.4, 2
+Output: 3.4
