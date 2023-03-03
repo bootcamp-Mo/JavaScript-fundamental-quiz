@@ -33,3 +33,14 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
+
+##Link 
+https://bootcamp-mo.github.io/JavaScript-fundamental-quiz/
+
+## Screenshots
+
+
+![Capture1](https://user-images.githubusercontent.com/122568039/222612730-17975ad8-08a7-4fb7-a31c-09c91e85da46.PNG)
+![Capture2](https://user-images.githubusercontent.com/122568039/222612734-f15bd24b-1a1e-459b-b5a7-d98f4689d48c.PNG)
+![Capture3](https://user-images.githubusercontent.com/122568039/222612737-51b3c63f-2889-4c56-a0ff-ed67a9db33f8.PNG)
+![Capture4](https://user-images.githubusercontent.com/122568039/222612739-bb8a7f70-c3af-4c16-8d6f-a40315ddbc84.PNG)
